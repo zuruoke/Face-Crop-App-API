@@ -11,10 +11,12 @@ from keras_retinanet.utils.image import preprocess_image, resize_image
 import flask
 import io
 import uuid
+from flask_ngrok import run_with_ngrok
 
 
 
 app = flask.Flask(__name__)
+run_with_ngrok(app)
 model = None
 
 
