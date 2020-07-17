@@ -69,4 +69,4 @@ if __name__ == "__main__":
     print(("* Loading Zuruoke model and Flask starting server..."
         "please wait until server has fully started"))
     load_model()
-    app.run(port=8000, debug=True)           
+    app.run()           
