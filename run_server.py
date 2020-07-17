@@ -19,7 +19,7 @@ model = None
 
 
 def load_model():
-	 #urllib.request.urlretrieve("https://github.com/zuruoke/Face-Crop-App-API/releases/download/v0.1-alpha/crop_weight.h5", "FACE_CROP.h5")
+    urllib.request.urlretrieve("https://github.com/zuruoke/Face-Crop-App-API/releases/download/v0.1-alpha/crop_weight.h5", "FACE_CROP.h5")
     global model
     model_file = 'FACE_CROP.h5'
     model = models.load_model(model_file)
