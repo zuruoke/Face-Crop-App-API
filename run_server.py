@@ -51,7 +51,7 @@ def predict():
 
             # preprocess the image and prepare it for classification    
             image, scale = prepare_image(image) 
-            boxes, scores, labels = model.predict_on_batch(np.expand_dims(IMAGE, axis=0))
+            boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))
             boxes /= scale  
             data["predictions"] = []    
             for box, score, label in zip(boxes[0], scores[0], labels[0]):   
