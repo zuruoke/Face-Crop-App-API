@@ -61,7 +61,7 @@ def predict():
                 r = {"image_name":k, "x_min": box[1], "y_min": box[3], "x_max": box[0], "y_max": box[2]}  
                 data["predictions"].append(r)   
                 data["success"] = True      
-    return flask.jsonify(data)   
+    return flask.jsonify(str(data))   
 
 
 
