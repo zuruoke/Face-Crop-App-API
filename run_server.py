@@ -57,11 +57,11 @@ def predict():
             for box, score, label in zip(boxes[0], scores[0], labels[0]):   
                 if score < 0.5: 
                     break   
-                    box = box.astype(np.int32)  
+                box = box.astype(np.int32)  
                 r = {"image_name":k, "x_min": box[1], "y_min": box[3], "x_max": box[0], "y_max": box[2]}  
                 data["predictions"].append(r)   
                 data["success"] = True      
-    return flask.jsonify(str(data))   
+    return flask.jsonify(data)   
 
 
 
