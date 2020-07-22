@@ -7,9 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1Du3XCl-h2i4jSzUou39rwBAgp7pJ7oob
 """
 
-import os
-os.mkdir("Reed")
-
 import requests
 import json
 import ast
@@ -20,7 +17,9 @@ import cv2
 from PIL import Image
 # initialize the Keras REST API endpoint URL along with the input
 # image path
-os.mkdir("Snake")
+
+if not os.path.exists('Face_Cropped_Images'):
+    os.mkdir('Face_Cropped_Images')
 IMG_PATH = input("Enter the Image Directory Path:")
 NGROK_API = input("Enter the NGROK API URL:")
 Pred = []
@@ -73,7 +72,7 @@ x.apply(lambda row: map_to_data(row, converted_data_train), axis=1)
 
 df = pd.DataFrame(converted_data_train)
 
-path_2 = 'Snake/'
+path_2 = 'Face_Cropped_Images/'
 idl = 0
 def save_cropped_image(_df):
     global idl
