@@ -63,7 +63,7 @@ To consume the Keras REST API:
       %cd Face-Crop-App-API/
       
       
-- Then run req.py - a new directory called **Face_Cropped_Images** will be created in the Face-Crop-App-API directory to store the Face Cropped Images
+- Then run *req.py* - a new directory called **Face_Cropped_Images** will be created in the Face-Crop-App-API directory to store the Face Cropped Images
 
       !python req.py
       
@@ -82,7 +82,7 @@ To consume the Keras REST API:
 
 
    
- **N/B: The Face Cropped Images are in BGR format, if you want it in RGB format, use Cv2 to convert to the RGB format
+ **N/B: The Face Cropped Images are in BGR format, if you want it in RGB format, use Cv2 to convert to the RGB format**
 
     
       
